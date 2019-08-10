@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Apps</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_fragment_main_text3">Login with</string>
+    <string name="login_fragment_main_text4">use your email for login or register</string>
+    <string name="login_fragment_main_social_media">Social Media</string>
+    <string name="submit_button">MASUK</string>
+    <string name="validation_email_required">Email belum terisi</string>
+    <string name="validation_password_required">Password belum terisi</string>
+    <string name="validation_email_invalid">Email tidak sesuai</string>
+</resources>

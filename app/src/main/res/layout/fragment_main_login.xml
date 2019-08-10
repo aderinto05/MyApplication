@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/ic_padding_target"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/email_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/email"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="#4d4d4d"
+            android:textColorHint="#aeaeae"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+        <EditText
+            android:id="@+id/password_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/password"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="#4d4d4d"
+            android:textColorHint="#aeaeae"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/email_edittext"/>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0.15"
+            android:background="@drawable/border_button_orange"
+            android:clickable="false"
+            android:enabled="false"
+            android:minHeight="36dp"
+            android:text="@string/submit_button"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/password_edittext"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/new_fragment_login_main_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/white"
+            android:indeterminateTintMode="src_atop" />
+    </FrameLayout>
+
+</RelativeLayout>

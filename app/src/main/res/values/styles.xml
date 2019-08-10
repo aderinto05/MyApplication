@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="PopupDialogTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppPageControlStyle">
+        <!-- To change indicator size -->
+        <item name="apc_indicatorSize">2dp</item>
+        <!-- To change distance between indicators -->
+        <item name="apc_indicatorDistance">4dp</item>
+        <!-- To change current item indicator size -->
+        <item name="apc_currentIndicatorSize">3dp</item>
+        <!-- To change indicator colors -->
+        <item name="apc_colorCurrentDefault">@color/light_grey</item>
+        <item name="apc_colorCurrentPressed">@color/transparant</item>
+        <item name="apc_colorNormalDefault">@color/transparant</item>
+        <item name="apc_colorNormalPressed">@color/transparant</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>
