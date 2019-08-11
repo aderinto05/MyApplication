@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.myapplication.R;
-import com.myapplication.main.model.ItemChild;
+import com.myapplication.model.ItemChild;
 
 import java.io.IOException;
 import java.io.InputStream;

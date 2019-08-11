@@ -23,6 +23,9 @@
             android:textColor="#4d4d4d"
             android:textColorHint="#aeaeae"
             android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/ic_padding_target"
+            android:layout_marginLeft="@dimen/ic_padding_target"
+            android:layout_marginBottom="@dimen/ic_padding_target"
             android:layout_centerHorizontal="true"/>
         <EditText
             android:id="@+id/password_edittext"
@@ -37,6 +40,9 @@
             android:textColorHint="#aeaeae"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/ic_padding_target"
+            android:layout_marginLeft="@dimen/ic_padding_target"
+            android:layout_marginBottom="@dimen/ic_padding_target"
             android:layout_below="@+id/email_edittext"/>
 
         <Button

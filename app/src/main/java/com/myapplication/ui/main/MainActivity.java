@@ -1,14 +1,13 @@
-package com.myapplication.main;
+package com.myapplication.ui.main;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.ActionBar;
 
-import com.myapplication.main.fragment.DetailFragment;
-import com.myapplication.main.fragment.MainFragment;
 import com.myapplication.R;
-import com.myapplication.main.model.ItemChild;
+import com.myapplication.ui.main.fragment.DetailFragment;
+import com.myapplication.ui.main.fragment.MainFragment;
+import com.myapplication.model.ItemChild;
 import com.myapplication.util.Constant;
 
 import java.util.List;
@@ -22,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.abs_layout);
         mainFragment = new MainFragment();
         fragmentManager = getSupportFragmentManager();
         changeFragment(Constant.mainFragment);
@@ -46,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }else if (i.equalsIgnoreCase(Constant.detailItemFragment)) {
             try{
-                isShowActionBar(false);
                 fragmentManager.beginTransaction().
                         addToBackStack(Constant.detailItemFragment).
                         replace(R.id.chooseVideoFrameLayout, detailFragment).
@@ -59,21 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        getSupportActionBar().hide();
-        getSupportActionBar().show();
         if (fragmentManager != null && fragmentManager.getBackStackEntryCount() > 0) {
             if(fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount()-1).getName().equalsIgnoreCase(Constant.detailItemFragment)){
                 changeFragment(Constant.mainFragment);
-                isShowActionBar(true);
             }
         }
-    }
-
-    public void isShowActionBar(boolean isShow){
-        if(isShow)
-            getSupportActionBar().show();
-        else
-            getSupportActionBar().hide();
     }
 
 }

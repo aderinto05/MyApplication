@@ -1,4 +1,4 @@
-package com.myapplication.main.model;
+package com.myapplication.model;
 
 public class ItemChild {
     private String thumbnailUrl;

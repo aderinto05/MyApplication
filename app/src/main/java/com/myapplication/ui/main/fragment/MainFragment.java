@@ -1,4 +1,4 @@
-package com.myapplication.main.fragment;
+package com.myapplication.ui.main.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.myapplication.main.adapter.MainTabsPagerAdapter;
+import com.myapplication.ui.main.adapter.MainTabsPagerAdapter;
 import com.myapplication.R;
 
 import butterknife.BindView;
@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * Created by mivo on 11/29/18.
+ * Created by ade rinto on 11/29/18.
  */
 
 public class MainFragment extends Fragment {
@@ -39,6 +39,21 @@ public class MainFragment extends Fragment {
         mainTabsPagerAdapter = new MainTabsPagerAdapter(getChildFragmentManager());
         pager.setAdapter(mainTabsPagerAdapter);
         pager.setOffscreenPageLimit(2);
+        tabLayout.setupWithViewPager(pager);
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            int iconId = -1;
+            switch (i) {
+                case 0:
+                    iconId = R.drawable.ic_home;
+                    break;
+                case 1:
+                    iconId = R.drawable.user;
+                    break;
+            }
+            tabLayout.getTabAt(i).setIcon(iconId);
+        }
+
+// Needed since support libraries version 23.0.0
         pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -46,13 +61,21 @@ public class MainFragment extends Fragment {
 
             @Override
             public void onPageSelected(int position) {
+                tabLayout.getTabAt(position).select();
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
             }
+
         });
-        tabLayout.setupWithViewPager(pager);
+
+        tabLayout.setOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(pager) {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                super.onTabSelected(tab);
+            }
+        });
 
         return view;
     }
