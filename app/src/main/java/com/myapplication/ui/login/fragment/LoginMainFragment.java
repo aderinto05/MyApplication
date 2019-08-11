@@ -1,4 +1,4 @@
-package com.myapplication.login.fragment;
+package com.myapplication.ui.login.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.myapplication.R;
-import com.myapplication.login.LoginActivity;
+import com.myapplication.ui.login.LoginActivity;
 import com.myapplication.model.User;
 import com.myapplication.util.PreferenceManagerUtil;
 

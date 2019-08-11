@@ -1,4 +1,4 @@
-package com.myapplication.main.fragment;
+package com.myapplication.ui.main.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.androidpagecontrol.PageControl;
 import com.myapplication.R;
-import com.myapplication.main.model.ItemChild;
+import com.myapplication.model.ItemChild;
 import com.myapplication.util.ItemTabPagerAdapter;
 
 import java.util.List;

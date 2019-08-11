@@ -1,4 +1,4 @@
-package com.myapplication.main.fragment;
+package com.myapplication.ui.main.fragment;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.myapplication.main.fragment;
+package com.myapplication.ui.main.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,10 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.myapplication.R;
-import com.myapplication.main.MainActivity;
-import com.myapplication.main.adapter.ItemAdapter;
-import com.myapplication.main.model.Item;
-import com.myapplication.main.model.ItemChild;
+import com.myapplication.ui.main.MainActivity;
+import com.myapplication.ui.main.adapter.ItemAdapter;
+import com.myapplication.model.Item;
+import com.myapplication.model.ItemChild;
 import com.myapplication.util.LinearManager;
 import com.myapplication.util.application.Application;
 
@@ -48,16 +48,13 @@ public class HomeFragment extends Fragment implements ItemAdapter.OnItemClickLis
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_home, container, false);
         unbinder = ButterKnife.bind(this, rootView);
-//        if(mLinearLayoutManager == null){
-            mLinearLayoutManager = new LinearManager(Application.getAppContext());
-            recyclerView.setLayoutManager(mLinearLayoutManager);
-            loadData();
-//        }
+        mLinearLayoutManager = new LinearManager(Application.getAppContext());
+        recyclerView.setLayoutManager(mLinearLayoutManager);
+        loadData();
         return rootView;
     }
 
     private void loadData(){
-        // get input stream
         if(itemList.size() == 0){
             ItemChild itemChild1 = new ItemChild("rak.jpeg");
             ItemChild itemChild2 = new ItemChild("westafel.jpeg");
@@ -97,47 +94,14 @@ public class HomeFragment extends Fragment implements ItemAdapter.OnItemClickLis
         recyclerView.setAdapter(itemAdapter);
     }
 
-//    public void initiatePopup() {
-//        if(mPopUpView!=null && mPopUpView.isShowing()){
-//            return;
-//        }
-//        mPopUpView = new Dialog(getActivity(), R.style.PopupDialogTheme); //android.R.style.Theme_Translucent_NoTitleBar PopupDialogTheme //Theme_Translucent_NoTitleBar   //Theme_Material_Light_NoActionBar_TranslucentDecor
-//        mPopUpView.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        mPopUpView.setContentView(R.layout.dialog_view);
-//    }
-
     @Override
     public void onClickItemList(int position) {
-//        initiatePopup();
-
-//        new setAdapterTask().execute();
-//        mPopUpView.show();
-
         ((MainActivity) getActivity()).showDetailItem(itemList.get(position).getItemChild());
     }
-
-//    private class setAdapterTask extends AsyncTask<Void,Void,Void> {
-//        protected Void doInBackground(Void... params) {
-//            return null;
-//        }
-//
-//        @Override
-//        protected void onPostExecute(Void result) {
-//            if(pagerItem!=null){
-//                pagerItem.setAdapter(tabPagerAdapter);
-////            pager.setOffscreenPageLimit(1);
-////                pager.setCurrentItem(0);
-//                pageControl.setViewPager(pagerItem);
-//                pageControl.setPosition(0);
-////            tabLayout.setupWithViewPager(pager);
-//            }
-//        }
-//    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
     }
 
     @Override

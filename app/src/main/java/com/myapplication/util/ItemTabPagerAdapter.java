@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.myapplication.main.model.ItemChild;
+import com.myapplication.model.ItemChild;
 
 import java.util.ArrayList;
 import java.util.List;

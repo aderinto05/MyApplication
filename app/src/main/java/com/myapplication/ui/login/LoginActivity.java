@@ -1,4 +1,4 @@
-package com.myapplication.login;
+package com.myapplication.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.myapplication.R;
-import com.myapplication.login.fragment.LoginMainFragment;
-import com.myapplication.main.MainActivity;
+import com.myapplication.ui.login.fragment.LoginMainFragment;
+import com.myapplication.ui.main.MainActivity;
 import com.myapplication.util.Constant;
 import com.myapplication.util.PreferenceManagerUtil;
 

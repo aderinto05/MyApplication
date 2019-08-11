@@ -1,4 +1,4 @@
-package com.myapplication.main.adapter;
+package com.myapplication.ui.main.adapter;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.myapplication.R;
-import com.myapplication.main.model.Item;
+import com.myapplication.model.Item;
 
 import java.io.IOException;
 import java.io.InputStream;
